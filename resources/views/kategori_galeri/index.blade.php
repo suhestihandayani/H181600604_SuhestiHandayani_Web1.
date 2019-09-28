@@ -1,30 +1,37 @@
-<html>
+@extends('layouts.app')
 
-<head>
-<title>Kategori Galeri</title>
-</head>
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">List Kategori Galeri</div>
 
-<body>
-<table border="1">
-<tr>
-<td>ID</td>
-<td>Nama</td>
-<td>Users Id</td>
-<td>Create</td>
-</tr>
+                <div class="card-body">
+                    
+                <table border="1">
+                <tr>
+                <td>ID</td>
+                <td>Nama</td>
+                <td>Users Id</td>
+                <td>Create</td>
+                </tr>
 
-@foreach($listKategoriGaleri as $item)
+                @foreach($listKategoriGaleri as $item)
 
-<tr>
-<td>{!!$item->id!!}</td>
-<td>{!!$item->nama!!}</td>
-<td>{!!$item->users_id!!}</td>
-<td>{!!$item->created_at!!}</td>
-</tr>
+                <tr>
+                <td>{!!$item->id!!}</td>
+                <td>{!!$item->nama!!}</td>
+                <td>{!!$item->users_id!!}</td>
+                <td>{!!$item->created_at!!}</td>
+                </tr>
 
-@endforeach
-</table>
+                @endforeach
+                </table>
 
-</body>
-
-</html>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
