@@ -31,6 +31,12 @@
             <label class="col-md-4 col-form-label text-md-right">Update</label>
             <label class="col-md-6 col-form-label text-md-left">{!!$kategoriArtikel->updated_at!!} </label>
             </div>
+
+            <div class="form-group row mb-0">
+            <div class="col-md-6 offset-md-4">
+            <a href="{!! route('kategori_artikel.index')!!}" class="btn btn-primary">Back</a>        
+            </div>
+            </div>
                                     
                             </div>
                         </div>

@@ -15,6 +15,7 @@
                 <td>Nama</td>
                 <td>Users Id</td>
                 <td>Create</td>
+                <td>Aksi</td>
                 </tr>
 
                  @foreach($listKategoriArtikel as $item)
@@ -24,6 +25,10 @@
                  <td>{!!$item->nama!!}</td>
                  <td>{!!$item->users_id!!}</td>
                  <td>{!!$item->created_at!!}</td>
+
+                 <td>
+                    <a href="{!!route('kategori_artikel.show',[$item->id])!!}" class="btn-sm btn-primary">Lihat</a>
+                 </td>
                  </tr>
 
                  @endforeach
