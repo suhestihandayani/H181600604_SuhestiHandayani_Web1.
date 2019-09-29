@@ -81,7 +81,7 @@
                             
                             <div class="col-md-6">
                              <div class="captcha">
-                             <span>{!! captcha_img() !!}</span>
+                             <span>{!! captcha_img('flat') !!}</span>
                              <button type="button" class="btn btn-success"><i class="fa fa-refresh" id="refresh">Refresh</i></button>
                              </div>
                                 <input id="captcha" type="captcha" class="form-control mt-2 @error('captcha') is-invalid @enderror" name="captcha" required placeholder="Enter Captcha">
