@@ -20,6 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/kategori_artikel','KategoriArtikelController@index')->name('kategori_artikel.index');
+Route::get('/kategori_artikel/create','KategoriArtikelController@create')->name('kategori_artikel.create');
+Route::post('/kategori_artikel','KategoriArtikelController@store')->name('kategori_artikel.store');
 Route::get('/kategori_artikel/{id}','KategoriArtikelController@show')->name('kategori_artikel.show');
 
 Route::get('/kategori_berita','KategoriBeritaController@index')->name('kategori_berita.index');
@@ -30,3 +32,17 @@ Route::get('/kategori_galeri/{id}','KategoriGaleriController@show')->name('kateg
 
 Route::get('/kategori_pengumuman','KategoriPengumumanController@index')->name('kategori_pengumuman.index');
 Route::get('/kategori_pengumuman/{id}','KategoriPengumumanController@show')->name('kategori_pengumuman.show');
+
+Route::get('/artikel','ArtikelController@index')->name('artikel.index');
+Route::get('/artikel/{id}','ArtikelController@show')->name('artikel.show');
+
+Route::get('/berita','BeritaController@index')->name('berita.index');
+Route::get('/berita/{id}','BeritaController@show')->name('berita.show');
+
+Route::get('/galeri','GaleriController@index')->name('galeri.index');
+Route::get('/galeri/{id}','GaleriController@show')->name('galeri.show');
+
+Route::get('/pengumuman','PengumumanController@index')->name('pengumuman.index');
+Route::get('/pengumuman/{id}','PengumumanController@show')->name('pengumuman.show');
+
+

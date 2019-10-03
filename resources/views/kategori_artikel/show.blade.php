@@ -24,12 +24,12 @@
 
             <div class="form-group row">
             <label class="col-md-4 col-form-label text-md-right">Create</label>
-            <label class="col-md-6 col-form-label text-md-left">{!!$kategoriArtikel->created_at!!} </label>
+            <label class="col-md-6 col-form-label text-md-left">{!!$kategoriArtikel->created_at->format('d/M/Y H:i')!!} </label>
             </div>
 
             <div class="form-group row">
             <label class="col-md-4 col-form-label text-md-right">Update</label>
-            <label class="col-md-6 col-form-label text-md-left">{!!$kategoriArtikel->updated_at!!} </label>
+            <label class="col-md-6 col-form-label text-md-left">{!!$kategoriArtikel->updated_at->format('d/M/Y H:i')!!} </label>
             </div>
 
             <div class="form-group row mb-0">
