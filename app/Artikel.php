@@ -9,7 +9,7 @@ class Artikel extends Model
     protected $table='artikel';
 
     protected $fillable=[
-        'nama', 'user_id'
+        'nama', 'users_id'
     ];
 
     protected $casts=[ 
