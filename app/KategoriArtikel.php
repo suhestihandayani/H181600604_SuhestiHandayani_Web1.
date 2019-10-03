@@ -10,7 +10,7 @@ class KategoriArtikel extends Model
     protected $table='kategori_artikel';
 
     protected $fillable=[
-        'nama', 'user_id'
+        'nama', 'users_id'
     ];
 
     protected $casts=[ 
