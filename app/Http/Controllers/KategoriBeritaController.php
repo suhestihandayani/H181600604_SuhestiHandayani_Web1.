@@ -13,5 +13,13 @@ class KategoriBeritaController extends Controller
         
      //blade
      return view('kategori_berita.index', compact ('listKategoriBerita'));
-}
+     }
+
+      public function show ($id){
+          //$kategoriBerita=KategoriBerita::where('id,$id')->first();
+           $kategoriBerita=KategoriBerita::find($id);
+   
+           return view('kategori_berita.show', compact ('kategoriBerita'));
+   
+           }
 }
