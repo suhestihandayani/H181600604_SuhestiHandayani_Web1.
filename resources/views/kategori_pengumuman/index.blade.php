@@ -8,7 +8,7 @@
                 <div class="card-header">List Kategori Pengumuman</div>
 
                 <div class="card-body">
-                <a href="{!!route('kategori_pengumuman.create')!!}" class="btn btn-primary">Tambah Data</a>
+                <a href="{!!route('kategori_pengumuman.create')!!}" class="btn btn-primary">Tambah Data</a><br><br>
                    
                 <table border="1">
                 <tr>

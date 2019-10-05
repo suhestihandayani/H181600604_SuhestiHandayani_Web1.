@@ -89,3 +89,23 @@
     </div>
 </div>
 @endsection
+
+@section('scripts')
+<script>
+function refreshcaptcha(){
+$.ajax({
+url: "/refereshcaptcha",
+type: 'get',
+  dataType: 'html',        
+  success: function(json) {
+    $('.hasil_refreshrecaptcha').html(json);
+  },
+  error: function(data) {
+    alert('Try Again.');
+  }
+});
+}
+</script>
+@endsection
+
+

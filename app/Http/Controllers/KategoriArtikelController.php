@@ -9,7 +9,7 @@ class KategoriArtikelController extends Controller
 {
     public function index(){
         //eloquent => ORM (Object Relational Mapping)
-        $listKategoriArtikel=KategoriArtikel::all(); //select * from kategori_artikel
+        $listKategoriArtikel=KategoriArtikel::all(); 
         
         //blade
         return view('kategori_artikel.index', compact ('listKategoriArtikel'));
