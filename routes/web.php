@@ -1,5 +1,6 @@
 <?php
 
+Route::get('/refereshcapcha', 'HelperController@refereshCapcha');
 /*
 |--------------------------------------------------------------------------
 | Web Routes

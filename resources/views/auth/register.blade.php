@@ -77,14 +77,21 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="captcha" class="col-md-4 col-form-label text-md-right">{{ __('Captcha') }}</label>
-                            
+                        <div class="offset-md-4 col-md-6">
+                        <div class="hasil_refereshrecapcha">
+                        {!! captcha_img('flat') !!}
+                        </div>
+
+                        <br>
+                        <a href="javascript:void(0)" onclick="refreshCaptcha()">Refresh</a>
+                        </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="captcha" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Captcha') }}</label>
+
                             <div class="col-md-6">
-                             <div class="captcha">
-                             <span>{!! captcha_img('flat') !!}</span>
-                             <button type="button" class="btn btn-success"><i class="fa fa-refresh" id="refresh">Refresh</i></button>
-                             </div>
-                                <input id="captcha" type="captcha" class="form-control mt-2 @error('captcha') is-invalid @enderror" name="captcha" required placeholder="Enter Captcha">
+                                <input id="captcha" type="text" class="form-control @error('captcha') is-invalid @enderror" name="captcha" required>
 
                                 @error('captcha')
                                     <span class="invalid-feedback" role="alert">
@@ -93,6 +100,7 @@
                                 @enderror
                             </div>
                         </div>
+            
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -109,3 +117,20 @@
 </div>
 @endsection
 
+@section('scripts')
+<script>
+function refreshCaptcha(){
+$.ajax({
+url: "/refereshcapcha",
+type: 'get',
+  dataType: 'html',        
+  success: function(json) {
+    $('.hasil_refereshrecapcha').html(json);
+  },
+  error: function(data) {
+    alert('Try Again.');
+  }
+});
+}
+</script>
+@endsection
