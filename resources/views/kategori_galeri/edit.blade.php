@@ -6,11 +6,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Tambah Pengumuman</div>
+                <div class="card-header">Tambah Kategori Galeri</div>
                 <div class="card-body">
-                {!!Form::open(['route'=>'pengumuman.store','method'=>'post'])!!}
-                 @include('pengumuman.form')
-                {!!Form::close()!!}
+                {!!Form::model($kategoriGaleri, ['route' => ['kategori_galeri.update', $kategoriGaleri->id], 'method' =>'patch'])!!}
+                 @include('kategori_galeri.form')
+                {!!Form::close() !!}
                 </div>
             </div>
         </div>

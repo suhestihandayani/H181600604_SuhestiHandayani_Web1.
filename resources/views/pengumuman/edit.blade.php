@@ -8,9 +8,9 @@
             <div class="card">
                 <div class="card-header">Tambah Pengumuman</div>
                 <div class="card-body">
-                {!!Form::open(['route'=>'pengumuman.store','method'=>'post'])!!}
+                {!! Form::model($pengumuman, ['route' => ['pengumuman.update', $pengumuman->id], 'method' =>'patch']) !!}
                  @include('pengumuman.form')
-                {!!Form::close()!!}
+                {!! Form::close() !!}
                 </div>
             </div>
         </div>

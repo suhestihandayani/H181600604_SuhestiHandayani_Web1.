@@ -16,6 +16,7 @@
                         <td>Isi</td>
                         <td>Users Id</td>
                         <td>Create</td>
+                        <td>Update</td>
                         <td>Aksi</td>
                     </tr>
 
@@ -27,9 +28,13 @@
                         <td>{!! $item->isi !!}</td>
                         <td>{!! $item->users_id !!}</td>
                         <td>{!! $item->created_at->format('d/m/Y H:i') !!}</td>
+                        <td>{!!$item->updated_at->format('d/M/Y H:i')!!}</td>
                         <td>
-                            <a href="{!! route('artikel.show' ,[$item->id]) !!}"  
-                                class="btn btn-sm btn-danger">Lihat</a>
+                            <a href="{!! route('artikel.show' ,[$item->id]) !!}" class="btn btn-sm btn-primary">Lihat</a>
+                            <a href="{!! route('artikel.edit',[$item->id])!!}" class="btn-sm btn-success">Ubah</a>
+                            {!! Form::open(['route' => ['artikel.destroy', $item->id], 'method' =>'delete']) !!}
+                            {!! Form::submit('Hapus', ['class'=>'btn-sm btn-danger', 'onClick'=>"return confirm('Apakah Anda yakin menghapus data ini?')"]); !!}
+                            {!! Form::close() !!}
                     </tr>
 
                         @endforeach
