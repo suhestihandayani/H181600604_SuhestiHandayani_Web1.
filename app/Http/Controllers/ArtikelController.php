@@ -30,6 +30,7 @@ class ArtikelController extends Controller
     }
 
     public function store(Request $request){
+
         $input=$request->all();
 
         Artikel::create($input);

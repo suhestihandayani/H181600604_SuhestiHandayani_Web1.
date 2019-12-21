@@ -12,12 +12,12 @@
                     
                 <table border="1">
                 <tr>
-                <td>ID</td>
-                <td>Nama</td>
-                <td>Users Id</td>
-                <td>Create</td>
-                <td>Update</td>
-                <td>Aksi</td>
+                <td align="center">ID</td>
+                <td align="center">Nama</td>
+                <td align="center">Users Id</td>
+                <td align="center">Create</td>
+                <td align="center">Update</td>
+                <td align="center" colspan="3">Aksi</td>
                 </tr>
 
                 @foreach($listKategoriGaleri as $item)
@@ -31,9 +31,9 @@
                 
 
                 <td>
-                    <a href="{!!route('kategori_galeri.show',[$item->id])!!}" class="btn-sm btn-primary">Lihat</a>
-                    <a href="{!!route('kategori_galeri.edit',[$item->id])!!}" class="btn-sm btn-warning">Ubah</a>
-                    {!! Form::open(['route' => ['kategori_galeri.destroy', $item->id], 'method' =>'delete']) !!}
+                    <a href="{!!route('kategori_galeri.show',[$item->id])!!}" class="btn-sm btn-primary">Lihat</a></td>
+                    <td><a href="{!!route('kategori_galeri.edit',[$item->id])!!}" class="btn-sm btn-warning">Ubah</a></td>
+                    <td>{!! Form::open(['route' => ['kategori_galeri.destroy', $item->id], 'method' =>'delete']) !!}
                     {!! Form::submit('Hapus', ['class'=>'btn-sm btn-danger', 'onClick'=>"return confirm('Apakah Anda yakin menghapus data ini?')"]); !!}
                     {!! Form::close() !!}
                  </td>
